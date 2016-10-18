@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-sudo apt-get --assume-yes install r-cran-rjava
-echo "rJava installed"
+
+sudo R --no-save -q -e "install.packages('rJava')"
+sudo R CMD javareconf
+echo "finish install rJava"
+
